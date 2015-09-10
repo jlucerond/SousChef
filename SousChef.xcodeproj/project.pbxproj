@@ -29,7 +29,6 @@
 		299254471A243F4A0073F8AC /* RecipeDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 299254461A243F4A0073F8AC /* RecipeDetailController.swift */; };
 		299254491A2440CB0073F8AC /* ViewControllerContainers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 299254481A2440CB0073F8AC /* ViewControllerContainers.swift */; };
 		299567681A268A2A006EE6EE /* WatchKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 299567671A268A2A006EE6EE /* WatchKit.framework */; };
-		299567721A268A2A006EE6EE /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 299567711A268A2A006EE6EE /* Images.xcassets */; };
 		299567761A268A2A006EE6EE /* SousChef Watch App.app in Resources */ = {isa = PBXBuildFile; fileRef = 299567751A268A2A006EE6EE /* SousChef Watch App.app */; };
 		2995677D1A268A2A006EE6EE /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2995677C1A268A2A006EE6EE /* Interface.storyboard */; };
 		2995677F1A268A2A006EE6EE /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2995677E1A268A2A006EE6EE /* Images.xcassets */; };
@@ -56,6 +55,14 @@
 		D8066DEE1B979E5000C37544 /* RecipeRowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8066DED1B979E5000C37544 /* RecipeRowController.swift */; };
 		D8066DF01B97A13100C37544 /* RecipesInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8066DEF1B97A13100C37544 /* RecipesInterfaceController.swift */; };
 		D8066DF21B988EC000C37544 /* RecipeDetailInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8066DF11B988EC000C37544 /* RecipeDetailInterfaceController.swift */; };
+		D82B32441B9A39F800EC7C10 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D82B32431B9A39F800EC7C10 /* Images.xcassets */; };
+		D82B32461B9A681E00EC7C10 /* IngredientRowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D82B32451B9A681E00EC7C10 /* IngredientRowController.swift */; };
+		D82B32481B9A6E1D00EC7C10 /* StepRowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D82B32471B9A6E1D00EC7C10 /* StepRowController.swift */; };
+		D82B324A1B9A6F4100EC7C10 /* RecipeIngredientsInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D82B32491B9A6F4100EC7C10 /* RecipeIngredientsInterfaceController.swift */; };
+		D82B324C1B9A77A600EC7C10 /* RecipeDirectionsInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D82B324B1B9A77A600EC7C10 /* RecipeDirectionsInterfaceController.swift */; };
+		D82B324E1B9A7F9200EC7C10 /* GroceryTypeRowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D82B324D1B9A7F9200EC7C10 /* GroceryTypeRowController.swift */; };
+		D82B32501B9A802D00EC7C10 /* GroceryRowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D82B324F1B9A802D00EC7C10 /* GroceryRowController.swift */; };
+		D82B32521B9A896400EC7C10 /* GroceryInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D82B32511B9A896400EC7C10 /* GroceryInterfaceController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -134,7 +141,6 @@
 		299567651A268A2A006EE6EE /* SousChef WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "SousChef WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		299567671A268A2A006EE6EE /* WatchKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WatchKit.framework; path = System/Library/Frameworks/WatchKit.framework; sourceTree = SDKROOT; };
 		2995676B1A268A2A006EE6EE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		299567711A268A2A006EE6EE /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		299567751A268A2A006EE6EE /* SousChef Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SousChef Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2995677B1A268A2A006EE6EE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2995677C1A268A2A006EE6EE /* Interface.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Interface.storyboard; sourceTree = "<group>"; };
@@ -175,9 +181,17 @@
 		29C1D3301A2591CD00A72B5B /* UIView+WebCacheOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+WebCacheOperation.m"; sourceTree = "<group>"; };
 		29C1D3471A25924200A72B5B /* SousChef-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SousChef-Bridging-Header.h"; sourceTree = "<group>"; };
 		29D973201A45FA15002B6D90 /* InitialInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = InitialInterfaceController.swift; path = "SousChef WatchKit Extension/InitialInterfaceController.swift"; sourceTree = SOURCE_ROOT; };
-		D8066DED1B979E5000C37544 /* RecipeRowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipeRowController.swift; sourceTree = "<group>"; };
+		D8066DED1B979E5000C37544 /* RecipeRowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RecipeRowController.swift; path = "../SousChef Watch App/RecipeRowController.swift"; sourceTree = "<group>"; };
 		D8066DEF1B97A13100C37544 /* RecipesInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipesInterfaceController.swift; sourceTree = "<group>"; };
 		D8066DF11B988EC000C37544 /* RecipeDetailInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RecipeDetailInterfaceController.swift; path = "SousChef WatchKit Extension/RecipeDetailInterfaceController.swift"; sourceTree = SOURCE_ROOT; };
+		D82B32431B9A39F800EC7C10 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		D82B32451B9A681E00EC7C10 /* IngredientRowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IngredientRowController.swift; sourceTree = "<group>"; };
+		D82B32471B9A6E1D00EC7C10 /* StepRowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StepRowController.swift; sourceTree = "<group>"; };
+		D82B32491B9A6F4100EC7C10 /* RecipeIngredientsInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipeIngredientsInterfaceController.swift; sourceTree = "<group>"; };
+		D82B324B1B9A77A600EC7C10 /* RecipeDirectionsInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RecipeDirectionsInterfaceController.swift; path = "SousChef WatchKit Extension/RecipeDirectionsInterfaceController.swift"; sourceTree = SOURCE_ROOT; };
+		D82B324D1B9A7F9200EC7C10 /* GroceryTypeRowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroceryTypeRowController.swift; sourceTree = "<group>"; };
+		D82B324F1B9A802D00EC7C10 /* GroceryRowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroceryRowController.swift; sourceTree = "<group>"; };
+		D82B32511B9A896400EC7C10 /* GroceryInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GroceryInterfaceController.swift; path = "SousChef WatchKit Extension/GroceryInterfaceController.swift"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -212,8 +226,10 @@
 			children = (
 				29D973201A45FA15002B6D90 /* InitialInterfaceController.swift */,
 				D8066DEF1B97A13100C37544 /* RecipesInterfaceController.swift */,
-				D8066DED1B979E5000C37544 /* RecipeRowController.swift */,
 				D8066DF11B988EC000C37544 /* RecipeDetailInterfaceController.swift */,
+				D82B32491B9A6F4100EC7C10 /* RecipeIngredientsInterfaceController.swift */,
+				D82B324B1B9A77A600EC7C10 /* RecipeDirectionsInterfaceController.swift */,
+				D82B32511B9A896400EC7C10 /* GroceryInterfaceController.swift */,
 			);
 			name = "Interface Controllers";
 			path = "../SousChef Watch App";
@@ -357,7 +373,7 @@
 			isa = PBXGroup;
 			children = (
 				294A21D81A268FF500C36CE5 /* Interface Controllers */,
-				299567711A268A2A006EE6EE /* Images.xcassets */,
+				D82B32431B9A39F800EC7C10 /* Images.xcassets */,
 				2995676A1A268A2A006EE6EE /* Supporting Files */,
 				29FEC0761A2A8C4900684D80 /* Row Controllers */,
 			);
@@ -460,6 +476,11 @@
 		29FEC0761A2A8C4900684D80 /* Row Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				D8066DED1B979E5000C37544 /* RecipeRowController.swift */,
+				D82B32451B9A681E00EC7C10 /* IngredientRowController.swift */,
+				D82B32471B9A6E1D00EC7C10 /* StepRowController.swift */,
+				D82B324D1B9A7F9200EC7C10 /* GroceryTypeRowController.swift */,
+				D82B324F1B9A802D00EC7C10 /* GroceryRowController.swift */,
 			);
 			name = "Row Controllers";
 			sourceTree = "<group>";
@@ -617,8 +638,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D82B32441B9A39F800EC7C10 /* Images.xcassets in Resources */,
 				29C177981A2959AF00FFBA44 /* Images.xcassets in Resources */,
-				299567721A268A2A006EE6EE /* Images.xcassets in Resources */,
 				299567761A268A2A006EE6EE /* SousChef Watch App.app in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -684,10 +705,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D82B32501B9A802D00EC7C10 /* GroceryRowController.swift in Sources */,
+				D82B32481B9A6E1D00EC7C10 /* StepRowController.swift in Sources */,
+				D82B324E1B9A7F9200EC7C10 /* GroceryTypeRowController.swift in Sources */,
+				D82B32521B9A896400EC7C10 /* GroceryInterfaceController.swift in Sources */,
 				D8066DF21B988EC000C37544 /* RecipeDetailInterfaceController.swift in Sources */,
 				D8066DEE1B979E5000C37544 /* RecipeRowController.swift in Sources */,
 				29D973211A45FA15002B6D90 /* InitialInterfaceController.swift in Sources */,
 				D8066DF01B97A13100C37544 /* RecipesInterfaceController.swift in Sources */,
+				D82B324C1B9A77A600EC7C10 /* RecipeDirectionsInterfaceController.swift in Sources */,
+				D82B32461B9A681E00EC7C10 /* IngredientRowController.swift in Sources */,
+				D82B324A1B9A6F4100EC7C10 /* RecipeIngredientsInterfaceController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
