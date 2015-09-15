@@ -9,7 +9,7 @@
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
-	<string>${SOUSCHEF_BUNDLE_PREFIX}.SousChef.watchkitextension</string>
+	<string>$(SOUSCHEF_BUNDLE_PREFIX).SousChef.watchkitextension</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>

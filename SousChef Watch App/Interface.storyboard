@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AgC-eL-Hgc">
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AgC-eL-Hgc">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="7701"/>
@@ -157,6 +157,16 @@
                             </items>
                         </table>
                     </items>
+                    <menu key="menu" id="rCZ-rI-LeK">
+                        <items>
+                            <menuItem title="Add to List" icon="add" id="JDR-9i-ArA">
+                                <connections>
+                                    <action selector="onAddToGrocery" destination="4fo-IR-kxU" id="1ok-fb-7Js"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Cancel" icon="decline" id="fG4-AD-mLW"/>
+                        </items>
+                    </menu>
                     <connections>
                         <outlet property="table" destination="ezM-LI-S8u" id="iDf-35-yOq"/>
                     </connections>
@@ -202,7 +212,7 @@
                     <items>
                         <table alignment="left" id="5br-da-fuE">
                             <items>
-                                <tableRow identifier="GroceryTypeRow" id="cuW-4e-F3V" customClass="GroceryTypeRowController" customModule="SousChef">
+                                <tableRow identifier="GroceryTypeRow" id="cuW-4e-F3V" customClass="GroceryTypeRowController" customModule="SousChef_WatchKit_Extension">
                                     <group key="rootItem" width="1" height="0.0" alignment="left" spacing="5" id="URs-qg-ica">
                                         <items>
                                             <imageView alignment="left" verticalAlignment="center" image="dairy" id="PBY-eL-WEu"/>
@@ -244,6 +254,21 @@
                             </items>
                         </table>
                     </items>
+                    <menu key="menu" id="7GT-8I-Yov">
+                        <items>
+                            <menuItem title="Clear All" icon="trash" id="G7B-Xj-gDj">
+                                <connections>
+                                    <action selector="onClearAll" destination="YJf-sy-Gqi" id="T6I-Sh-zQm"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Purchased" image="clear-purchased" id="xg5-WY-d22">
+                                <connections>
+                                    <action selector="onRemovePurchased" destination="YJf-sy-Gqi" id="GJ3-Nt-eyv"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Cancel" icon="decline" id="5Wx-xR-JJ3"/>
+                        </items>
+                    </menu>
                     <connections>
                         <outlet property="table" destination="5br-da-fuE" id="e0l-eD-9xg"/>
                     </connections>

@@ -10,6 +10,7 @@ import UIKit
 import WatchKit
 
 class GroceryTypeRowController: NSObject {
+  
   @IBOutlet weak var textLabel: WKInterfaceLabel!
   @IBOutlet weak var image: WKInterfaceImage!
    
