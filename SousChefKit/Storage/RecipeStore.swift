@@ -10,11 +10,17 @@ import Foundation
 
 private let kRecipesFileName = "Recipes"
 private let kRecipesFileExtension = "json"
+private let kAppGroupIdentifer = "group.com.iOSDevelopr.souschef.documents"
+private let kInitialRecipesCopiedKey = "com.rw.souschef.recipesCopied"
 
 public class RecipeStore {
-
-  public init() {}
-
+  
+  public init() {
+  // work on updating this
+//    if let sharedUserDefaults = NSUserDefaults()
+  
+  }
+  
   public lazy var recipes: [Recipe] = {
     var recipes = [Recipe]()
     if let data = NSData(contentsOfURL: self.savedRecipesURL) {
@@ -22,7 +28,7 @@ public class RecipeStore {
     }
     return recipes
     }()
-
+  
   // MARK: Private
   
   private func recipesFromData(data: NSData) -> [Recipe] {
@@ -80,13 +86,16 @@ public class RecipeStore {
     // sort alphabetically
     return newRecipes.sorted({ $0.name < $1.name })
   }
-
+  
   private let savedRecipesURL: NSURL = {
+    var sharedContainerURL: NSURL? = NSFileManager.defaultManager().containerURLForSecurityApplicationGroupIdentifier(kAppGroupIdentifer)
+    
     var docURL = NSURL()
-    if let bundledRecipes = NSBundle(forClass: RecipeStore.self).URLForResource(kRecipesFileName, withExtension: kRecipesFileExtension) {
-      docURL = bundledRecipes
+    if let sharedContainerURL = sharedContainerURL{
+      docURL = sharedContainerURL.URLByAppendingPathComponent("\(kRecipesFileName).\(kRecipesFileExtension)")
     }
+    
     return docURL
     }()
-
+  
 }
