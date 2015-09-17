@@ -16,9 +16,34 @@ private let kInitialRecipesCopiedKey = "com.rw.souschef.recipesCopied"
 public class RecipeStore {
   
   public init() {
-  // work on updating this
-//    if let sharedUserDefaults = NSUserDefaults()
-  
+    // this lets me know whether the recipes have already been copied (migration flag)
+    if let sharedUserDefaults = NSUserDefaults(suiteName: kAppGroupIdentifer){
+      let isRecipesCopied = sharedUserDefaults.boolForKey(kInitialRecipesCopiedKey)
+      if isRecipesCopied == true {
+        return
+      }
+      
+      // not sure
+      var bundledRecipesURL = NSBundle(forClass: RecipeStore.self).URLForResource(kRecipesFileName, withExtension: kRecipesFileExtension)
+      if (bundledRecipesURL == nil) {
+        return
+      }
+      
+      var data = NSData(contentsOfURL: bundledRecipesURL!)
+      if (data == nil){
+        return
+      }
+      
+      let success = data?.writeToURL(self.savedRecipesURL, atomically: true)
+      if (success == true){
+        sharedUserDefaults.setBool(true, forKey: kInitialRecipesCopiedKey)
+      }
+        
+      else{
+        println("Failed to copy Recipes from bundled into the shared container.")
+      }
+    }
+    
   }
   
   public lazy var recipes: [Recipe] = {
