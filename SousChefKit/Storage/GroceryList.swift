@@ -37,7 +37,7 @@ public class GroceryList {
 
   public func sectionForType(type: IngredientType) -> Int? {
     let sections = self.sections
-    return find(sections, type)
+    return sections.indexOf(type)
   }
 
   public func numberOfItemsInSection(section: Int) -> Int {
@@ -52,7 +52,7 @@ public class GroceryList {
 
   public func indexPathForItem(item: Ingredient) -> NSIndexPath? {
     if let group = table[item.type] {
-      if let index = find(group, item) {
+      if let index = group.indexOf(item) {
         return NSIndexPath(forRow: index, inSection: sectionForType(item.type)!)
       }
     }
@@ -84,7 +84,7 @@ public class GroceryList {
   
   public func purchasedItems() -> [Ingredient] {
     var purchasedItems = [Ingredient]()
-    list.map { (var anItem: Ingredient) -> Void in
+    list.map { (anItem: Ingredient) -> Void in
       if anItem.purchased == true {
         purchasedItems.append(anItem)
       }
@@ -94,7 +94,7 @@ public class GroceryList {
   
   /// Marks all quantities of an ingredient as purchased.
   public func setIngredient(ingredient: Ingredient, purchased: Bool) {
-    list.map { (var anItem: Ingredient) -> Void in
+    list.map { (anItem: Ingredient) -> Void in
       if anItem.name == ingredient.name {
         anItem.purchased = purchased
       }
@@ -116,7 +116,7 @@ public class GroceryList {
 
   public func addItemToList(newItem: Ingredient) {
     // the table is a uniqued list
-    if !contains(list, newItem) {
+    if !list.contains(newItem) {
       if var group = table[newItem.type] {
         group.append(newItem)
         table[newItem.type] = group
@@ -130,13 +130,13 @@ public class GroceryList {
 
   public func removeItem(oldItem: Ingredient) {
     if var group = table[oldItem.type] {
-      if let index = find(group, oldItem) {
+      if let index = group.indexOf(oldItem) {
         group.removeAtIndex(index)
         table[oldItem.type] = group
       }
     }
 
-    if let index = find(list, oldItem) {
+    if let index = list.indexOf(oldItem) {
       list.removeAtIndex(index)
     }
   }
@@ -169,7 +169,7 @@ public class GroceryList {
 
   private let savedGroceriesPath: String = {
     let paths = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)
-    let docPath = paths.first as! String
+    let docPath = paths.first as String!
     return "\(docPath)/com.rw.souschef.groceries.json"
   }()
 
@@ -180,14 +180,14 @@ public class GroceryList {
   private var table: GroceryTable = GroceryTable()
 
   private var sections: [IngredientType] {
-    return table.keys.array
+   return [IngredientType](table.keys)
   }
 
   private func updatedTable(itemList: GroceryItems) -> GroceryTable {
     var table = GroceryTable()
     for item in itemList {
       if var group = table[item.type] {
-        if !contains(group, item) {
+        if !group.contains(item) {
           group.append(item)
           table[item.type] = group // changing mutable arrays makes a copy in swift, need to reassign
         }
@@ -210,7 +210,7 @@ public class GroceryList {
   private func saveCurrentState() {
     let data = NSKeyedArchiver.archivedDataWithRootObject(list)
     if !NSFileManager.defaultManager().createFileAtPath(savedGroceriesPath, contents: data, attributes: nil) {
-      println("error saving grocery list")
+      print("error saving grocery list")
     }
   }
 

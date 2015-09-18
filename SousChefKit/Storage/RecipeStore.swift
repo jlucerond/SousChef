@@ -46,7 +46,7 @@ public class RecipeStore {
         
         if type == nil {
           let t = ingredientJSON["type"]
-          println("Invalid type \(t)")
+          print("Invalid type \(t)")
         }
         
         ingredients.append(Ingredient(quantity: quantity, name: name, type: type!))
@@ -78,7 +78,7 @@ public class RecipeStore {
     }
     
     // sort alphabetically
-    return newRecipes.sorted({ $0.name < $1.name })
+    return newRecipes.sort({ $0.name < $1.name })
   }
 
   private let savedRecipesURL: NSURL = {

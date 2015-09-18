@@ -8,7 +8,7 @@
 
 import Foundation
 
-public class Ingredient: NSObject, NSCoding, Equatable {
+public class Ingredient: NSObject, NSCoding {
 
   public let quantity: String
   public let name: String
@@ -29,7 +29,7 @@ public class Ingredient: NSObject, NSCoding, Equatable {
     self.purchased = false
   }
 
-  public required init(coder aDecoder: NSCoder) {
+  public required init?(coder aDecoder: NSCoder) {
     quantity = aDecoder.decodeObjectForKey(QuantityKey) as! String
     name = aDecoder.decodeObjectForKey(NameKey) as! String
     type = IngredientType(rawValue: aDecoder.decodeObjectForKey(TypeKey) as! String)!

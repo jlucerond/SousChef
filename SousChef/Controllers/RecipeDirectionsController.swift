@@ -60,7 +60,7 @@ class RecipeDirectionsController: UITableViewController {
   }
 
   override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-    let cell = tableView.dequeueReusableCellWithIdentifier("RecipeStepsCell", forIndexPath: indexPath) as! UITableViewCell
+    let cell = tableView.dequeueReusableCellWithIdentifier("RecipeStepsCell", forIndexPath: indexPath) 
     let step = recipe.steps[indexPath.row]
     cell.textLabel?.text = "\(indexPath.row+1). \(step)"
     return cell

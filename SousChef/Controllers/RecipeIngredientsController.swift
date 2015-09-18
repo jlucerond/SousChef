@@ -49,7 +49,7 @@ class RecipeIngredientsController: UITableViewController {
   }
 
   override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-    let cell = tableView.dequeueReusableCellWithIdentifier("RecipeIngredientsCell", forIndexPath: indexPath) as! UITableViewCell
+    let cell = tableView.dequeueReusableCellWithIdentifier("RecipeIngredientsCell", forIndexPath: indexPath) 
 
     if let item = recipe?.ingredients[indexPath.row] {
       let text = "\(item.quantity) \(item.name)"
@@ -73,7 +73,7 @@ class RecipeIngredientsController: UITableViewController {
   // MARK: UITableViewDelegate
 
   override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-    if let index = find(selectedIngredientPaths, indexPath) {
+    if let index = selectedIngredientPaths.indexOf(indexPath) {
       selectedIngredientPaths.removeAtIndex(index)
     } else {
       selectedIngredientPaths.append(indexPath)

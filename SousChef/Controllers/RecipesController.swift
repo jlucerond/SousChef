@@ -30,7 +30,7 @@ class RecipesController: UITableViewController {
 
     if identifier == "RecipeDetailSegue" {
       // pass through the selected recipe
-      if let path = tableView.indexPathForSelectedRow() {
+      if let path = tableView.indexPathForSelectedRow {
         let recipe = recipeStore.recipes[path.row]
         let destination = segue.destinationViewController as! RecipeDetailController
         destination.recipe = recipe

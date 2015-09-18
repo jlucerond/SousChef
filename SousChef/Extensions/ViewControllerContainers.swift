@@ -12,7 +12,7 @@ extension UIViewController {
 
   func addSubViewController(controller: UIViewController) {
     addChildViewController(controller)
-    controller.view.setTranslatesAutoresizingMaskIntoConstraints(false)
+    controller.view.translatesAutoresizingMaskIntoConstraints = false
     view.addSubview(controller.view)
 
     view.addConstraint(NSLayoutConstraint(item: controller.view,

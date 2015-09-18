@@ -74,7 +74,7 @@ class RecipeDetailController: UIViewController {
     if let index = RecipeDetailSelection(rawValue: sender.selectedSegmentIndex) {
       updateSelectedController(index)
     } else {
-      println("Unsupported recipe detail selection \(sender.selectedSegmentIndex)")
+      print("Unsupported recipe detail selection \(sender.selectedSegmentIndex)")
       abort()
     }
   }

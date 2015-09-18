@@ -86,7 +86,7 @@ class GroceriesController: UITableViewController {
   }
 
   override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-    let cell = tableView.dequeueReusableCellWithIdentifier("GroceryCell", forIndexPath: indexPath) as! UITableViewCell
+    let cell = tableView.dequeueReusableCellWithIdentifier("GroceryCell", forIndexPath: indexPath) 
     cell.accessoryType = .None
 
     if let item = groceryList.itemForIndexPath(indexPath) {
@@ -116,7 +116,7 @@ class GroceriesController: UITableViewController {
     label.backgroundColor = view.backgroundColor
     label.textColor = UIColor(white: 0.5, alpha: 1)
     label.font = UIFont.boldSystemFontOfSize(13)
-    label.setTranslatesAutoresizingMaskIntoConstraints(false)
+    label.translatesAutoresizingMaskIntoConstraints = false
 
     let type = groceryList.sectionForIndex(section)
     label.text = type.rawValue
@@ -140,7 +140,7 @@ class GroceriesController: UITableViewController {
     tableView.deselectRowAtIndexPath(indexPath, animated: true)
     let ingredient: Ingredient? = groceryList.itemForIndexPath(indexPath)
 
-    if let index = find(selectedIndexPaths, indexPath) {
+    if let index = selectedIndexPaths.indexOf(indexPath) {
       selectedIndexPaths.removeAtIndex(index)
       groceryList.setIngredient(ingredient!, purchased: false)
     } else {

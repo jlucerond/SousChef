@@ -29,10 +29,8 @@
 		299254471A243F4A0073F8AC /* RecipeDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 299254461A243F4A0073F8AC /* RecipeDetailController.swift */; };
 		299254491A2440CB0073F8AC /* ViewControllerContainers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 299254481A2440CB0073F8AC /* ViewControllerContainers.swift */; };
 		299567681A268A2A006EE6EE /* WatchKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 299567671A268A2A006EE6EE /* WatchKit.framework */; };
-		299567761A268A2A006EE6EE /* SousChef Watch App.app in Resources */ = {isa = PBXBuildFile; fileRef = 299567751A268A2A006EE6EE /* SousChef Watch App.app */; };
 		2995677D1A268A2A006EE6EE /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2995677C1A268A2A006EE6EE /* Interface.storyboard */; };
 		2995677F1A268A2A006EE6EE /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2995677E1A268A2A006EE6EE /* Images.xcassets */; };
-		299567821A268A2A006EE6EE /* SousChef WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 299567651A268A2A006EE6EE /* SousChef WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		29C177981A2959AF00FFBA44 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2995677E1A268A2A006EE6EE /* Images.xcassets */; };
 		29C1D30B1A25913000A72B5B /* RecipeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29C1D30A1A25913000A72B5B /* RecipeCell.swift */; };
 		29C1D3311A2591CD00A72B5B /* MKAnnotationView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 29C1D3111A2591CD00A72B5B /* MKAnnotationView+WebCache.m */; };
@@ -63,6 +61,11 @@
 		D82B324E1B9A7F9200EC7C10 /* GroceryTypeRowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D82B324D1B9A7F9200EC7C10 /* GroceryTypeRowController.swift */; };
 		D82B32501B9A802D00EC7C10 /* GroceryRowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D82B324F1B9A802D00EC7C10 /* GroceryRowController.swift */; };
 		D82B32521B9A896400EC7C10 /* GroceryInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D82B32511B9A896400EC7C10 /* GroceryInterfaceController.swift */; };
+		D8812E611BAB4664005E3FE9 /* SousChef WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 299567651A268A2A006EE6EE /* SousChef WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		D8812E641BAB4664005E3FE9 /* SousChef Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 299567751A268A2A006EE6EE /* SousChef Watch App.app */; };
+		D8B9AEC61BAC9A8000E892A4 /* SousChef WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 299567651A268A2A006EE6EE /* SousChef WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		D8B9AECA1BAC9AFA00E892A4 /* SousChefKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2984B4611A266070003CDE5C /* SousChefKit.framework */; };
+		D8B9AECB1BAC9AFA00E892A4 /* SousChefKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2984B4611A266070003CDE5C /* SousChefKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,19 +76,33 @@
 			remoteGlobalIDString = 2984B4601A266070003CDE5C;
 			remoteInfo = SousChefKit;
 		};
-		299567771A268A2A006EE6EE /* PBXContainerItemProxy */ = {
+		D8812E5F1BAB4664005E3FE9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 294B75F01A24173300BBCE01 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 299567641A268A2A006EE6EE;
+			remoteInfo = "SousChef WatchKit Extension";
+		};
+		D8812E621BAB4664005E3FE9 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 294B75F01A24173300BBCE01 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 299567741A268A2A006EE6EE;
 			remoteInfo = "SousChef Watch App";
 		};
-		299567801A268A2A006EE6EE /* PBXContainerItemProxy */ = {
+		D8B9AEC71BAC9A8000E892A4 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 294B75F01A24173300BBCE01 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 299567641A268A2A006EE6EE;
 			remoteInfo = "SousChef WatchKit Extension";
+		};
+		D8B9AECC1BAC9AFA00E892A4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 294B75F01A24173300BBCE01 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2984B4601A266070003CDE5C;
+			remoteInfo = SousChefKit;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -101,15 +118,48 @@
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		299567891A268A2A006EE6EE /* Embed App Extensions */ = {
+		D8812E651BAB4664005E3FE9 /* Embed App Extensions */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				299567821A268A2A006EE6EE /* SousChef WatchKit Extension.appex in Embed App Extensions */,
+				D8812E611BAB4664005E3FE9 /* SousChef WatchKit Extension.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D8812E661BAB4664005E3FE9 /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				D8812E641BAB4664005E3FE9 /* SousChef Watch App.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D8B9AEC91BAC9A8200E892A4 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				D8B9AEC61BAC9A8000E892A4 /* SousChef WatchKit Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D8B9AECE1BAC9AFA00E892A4 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				D8B9AECB1BAC9AFA00E892A4 /* SousChefKit.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
@@ -215,6 +265,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				299567681A268A2A006EE6EE /* WatchKit.framework in Frameworks */,
+				D8B9AECA1BAC9AFA00E892A4 /* SousChefKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -507,13 +558,15 @@
 				294B75F51A24173300BBCE01 /* Frameworks */,
 				294B75F61A24173300BBCE01 /* Resources */,
 				2984B4301A265FC5003CDE5C /* Embed Frameworks */,
-				299567891A268A2A006EE6EE /* Embed App Extensions */,
+				D8812E661BAB4664005E3FE9 /* Embed Watch Content */,
+				D8B9AEC91BAC9A8200E892A4 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 				2984B4771A266070003CDE5C /* PBXTargetDependency */,
-				299567811A268A2A006EE6EE /* PBXTargetDependency */,
+				D8812E631BAB4664005E3FE9 /* PBXTargetDependency */,
+				D8B9AEC81BAC9A8000E892A4 /* PBXTargetDependency */,
 			);
 			name = SousChef;
 			productName = SousChef;
@@ -545,31 +598,34 @@
 				299567611A268A2A006EE6EE /* Sources */,
 				299567621A268A2A006EE6EE /* Frameworks */,
 				299567631A268A2A006EE6EE /* Resources */,
+				D8B9AECE1BAC9AFA00E892A4 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				299567781A268A2A006EE6EE /* PBXTargetDependency */,
+				D8B9AECD1BAC9AFA00E892A4 /* PBXTargetDependency */,
 			);
 			name = "SousChef WatchKit Extension";
 			productName = "SousChef WatchKit Extension";
 			productReference = 299567651A268A2A006EE6EE /* SousChef WatchKit Extension.appex */;
-			productType = "com.apple.product-type.watchkit-extension";
+			productType = "com.apple.product-type.watchkit2-extension";
 		};
 		299567741A268A2A006EE6EE /* SousChef Watch App */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 299567831A268A2A006EE6EE /* Build configuration list for PBXNativeTarget "SousChef Watch App" */;
 			buildPhases = (
 				299567731A268A2A006EE6EE /* Resources */,
+				D8812E651BAB4664005E3FE9 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				D8812E601BAB4664005E3FE9 /* PBXTargetDependency */,
 			);
 			name = "SousChef Watch App";
 			productName = "SousChef Watch App";
 			productReference = 299567751A268A2A006EE6EE /* SousChef Watch App.app */;
-			productType = "com.apple.product-type.application.watchapp";
+			productType = "com.apple.product-type.application.watchapp2";
 		};
 /* End PBXNativeTarget section */
 
@@ -577,7 +633,8 @@
 		294B75F01A24173300BBCE01 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0620;
+				LastSwiftMigration = 0700;
+				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = "Ray Wenderlich";
 				TargetAttributes = {
 					294B75F71A24173300BBCE01 = {
@@ -644,7 +701,6 @@
 			files = (
 				D82B32441B9A39F800EC7C10 /* Images.xcassets in Resources */,
 				29C177981A2959AF00FFBA44 /* Images.xcassets in Resources */,
-				299567761A268A2A006EE6EE /* SousChef Watch App.app in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -731,15 +787,25 @@
 			target = 2984B4601A266070003CDE5C /* SousChefKit */;
 			targetProxy = 2984B4761A266070003CDE5C /* PBXContainerItemProxy */;
 		};
-		299567781A268A2A006EE6EE /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 299567741A268A2A006EE6EE /* SousChef Watch App */;
-			targetProxy = 299567771A268A2A006EE6EE /* PBXContainerItemProxy */;
-		};
-		299567811A268A2A006EE6EE /* PBXTargetDependency */ = {
+		D8812E601BAB4664005E3FE9 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 299567641A268A2A006EE6EE /* SousChef WatchKit Extension */;
-			targetProxy = 299567801A268A2A006EE6EE /* PBXContainerItemProxy */;
+			targetProxy = D8812E5F1BAB4664005E3FE9 /* PBXContainerItemProxy */;
+		};
+		D8812E631BAB4664005E3FE9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 299567741A268A2A006EE6EE /* SousChef Watch App */;
+			targetProxy = D8812E621BAB4664005E3FE9 /* PBXContainerItemProxy */;
+		};
+		D8B9AEC81BAC9A8000E892A4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 299567641A268A2A006EE6EE /* SousChef WatchKit Extension */;
+			targetProxy = D8B9AEC71BAC9A8000E892A4 /* PBXContainerItemProxy */;
+		};
+		D8B9AECD1BAC9AFA00E892A4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2984B4601A266070003CDE5C /* SousChefKit */;
+			targetProxy = D8B9AECC1BAC9AFA00E892A4 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -784,6 +850,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -853,6 +920,7 @@
 				INFOPLIST_FILE = SousChef/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "${SOUSCHEF_BUNDLE_PREFIX}.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "$(PRODUCT_NAME)/SousChef-Bridging-Header.h";
 			};
@@ -868,6 +936,7 @@
 				INFOPLIST_FILE = SousChef/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "${SOUSCHEF_BUNDLE_PREFIX}.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "$(PRODUCT_NAME)/SousChef-Bridging-Header.h";
 			};
@@ -891,6 +960,7 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.iOSDevelopr.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -913,6 +983,7 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.iOSDevelopr.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -927,16 +998,19 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
 				);
 				IBSC_MODULE = RW_Recipes_WatchKit_Extension;
 				INFOPLIST_FILE = "SousChef Watch App/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "$(SOUSCHEF_BUNDLE_PREFIX).SousChef.watchapp";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = 4;
-				"TARGETED_DEVICE_FAMILY[sdk=iphonesimulator*]" = "1,4";
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
 			};
 			name = Debug;
 		};
@@ -946,12 +1020,15 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				IBSC_MODULE = RW_Recipes_WatchKit_Extension;
 				INFOPLIST_FILE = "SousChef Watch App/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "$(SOUSCHEF_BUNDLE_PREFIX).SousChef.watchapp";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = 4;
-				"TARGETED_DEVICE_FAMILY[sdk=iphonesimulator*]" = "1,4";
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
 			};
 			name = Release;
 		};
@@ -959,14 +1036,19 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = "SousChef WatchKit Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "$(SOUSCHEF_BUNDLE_PREFIX).SousChef.watchapp.watchkitextension";
 				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
 			};
 			name = Debug;
 		};
@@ -974,10 +1056,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = "SousChef WatchKit Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "$(SOUSCHEF_BUNDLE_PREFIX).SousChef.watchapp.watchkitextension";
 				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
 			};
 			name = Release;
 		};

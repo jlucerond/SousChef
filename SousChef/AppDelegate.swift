@@ -61,12 +61,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     let categories = NSSet(array: [timerCategory, newRecipeCategory])
     
-    let settings = UIUserNotificationSettings(forTypes: .Alert | .Sound, categories: categories as Set<NSObject>)
+    let settings = UIUserNotificationSettings(forTypes: [.Alert, .Sound], categories: categories as Set<NSObject>)
     UIApplication.sharedApplication().registerUserNotificationSettings(settings)
   }
   
   func application(application: UIApplication, didRegisterUserNotificationSettings notificationSettings: UIUserNotificationSettings) {
-    if (notificationSettings.types & UIUserNotificationType.Alert) != nil {
+    if (notificationSettings.types.intersect(UIUserNotificationType.Alert)) != [] {
       application.registerForRemoteNotifications()
     }
   }
@@ -74,13 +74,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   // MARK: - Remote Notifications
   
   func application(application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: NSData) {
-    println("Register for remote notifications with device token: \(deviceToken).")
+    print("Register for remote notifications with device token: \(deviceToken).")
     // TODO: Send device token to push notification service of choice. See appendix on Setting up a Push Notification Server.
   }
   
   func application(application: UIApplication, didFailToRegisterForRemoteNotificationsWithError error: NSError) {
-    println("Failed to register for remote notifications. Make sure you are running on an actual device and check the Provisioning Profile.")
-    println(error.localizedDescription)
+    print("Failed to register for remote notifications. Make sure you are running on an actual device and check the Provisioning Profile.")
+    print(error.localizedDescription)
   }
   
   func application(application: UIApplication, didReceiveRemoteNotification userInfo: [NSObject : AnyObject]) {
@@ -166,7 +166,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   func scheduleTimerNotificationWithUserInfo(userInfo: [NSObject : AnyObject]!) {
 
     let application = UIApplication.sharedApplication()
-    if (application.currentUserNotificationSettings().types & UIUserNotificationType.Alert) != nil {
+    if (application.currentUserNotificationSettings()!.types.intersect(UIUserNotificationType.Alert)) != [] {
       let message = userInfo["message"] as! String
       let title = userInfo["title"] as! String
       let timer = userInfo["timer"] as! Int
